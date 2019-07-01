@@ -21,7 +21,7 @@ public class SingleLinkedList {
      */
     public static void addNode(SingleLinkedList linkedList,SingleLinkedList node){
         if(linkedList==null){
-           return;
+           linkedList=node;
         }
         if(linkedList.node==null){
             linkedList.node=node;
@@ -36,8 +36,8 @@ public class SingleLinkedList {
      * @param node 选择要删除的节点
      */
     public static void deleteNode(SingleLinkedList linkedList,SingleLinkedList node){
-        if(linkedList==null){
-           return;
+        if(linkedList==node){
+           linkedList=linkedList.node;
         }
         if(linkedList.node==node){
             SingleLinkedList wrapNode=linkedList.node.node;
